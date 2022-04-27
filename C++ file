@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+class XYZ
+{
+    private:
+    int num =100;
+    
+    public:
+    friend void disp(XYZ obj);
+};
+
+void disp(XYZ obj)
+{
+    cout<<obj.num;
+}
+
+int main()
+{
+    XYZ obj1;
+    disp(obj1);
+}
